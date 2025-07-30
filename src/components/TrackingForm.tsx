@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
-import { Package, Loader2, MapPin } from "lucide-react";
+import { MapPin, Clock, Shield, AlertTriangle, CheckCircle2 } from "lucide-react";
 
 interface FormData {
   full_name: string;
@@ -116,96 +116,135 @@ const TrackingForm = () => {
   };
 
   return (
-    <Card className="w-full max-w-md mx-auto shadow-lg">
-      <CardHeader className="text-center">
-        <div className="flex justify-center mb-4">
-          <div className="w-12 h-12 bg-gradient-to-r from-logistics-blue to-primary-glow rounded-full flex items-center justify-center">
-            <Package className="w-6 h-6 text-white" />
-          </div>
-        </div>
-        <CardTitle className="text-xl font-bold text-logistics-navy">Confirm Delivery Details</CardTitle>
-        <CardDescription>
-          Please confirm your delivery information to complete your package tracking setup.
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="space-y-2">
-            <Label htmlFor="full_name">Full Name</Label>
-            <Input
-              id="full_name"
-              type="text"
-              value={formData.full_name}
-              onChange={(e) => handleInputChange("full_name", e.target.value)}
-              placeholder="Enter your full name"
-              required
-            />
-          </div>
-
-          <div className="space-y-2">
-            <Label htmlFor="address">Delivery Address</Label>
-            <Input
-              id="address"
-              type="text"
-              value={formData.address}
-              onChange={(e) => handleInputChange("address", e.target.value)}
-              placeholder="Enter your full delivery address"
-              required
-            />
-          </div>
-
-          <div className="space-y-2">
-            <Label htmlFor="state">State</Label>
-            <Input
-              id="state"
-              type="text"
-              value={formData.state}
-              onChange={(e) => handleInputChange("state", e.target.value)}
-              placeholder="Enter your state"
-              required
-            />
-          </div>
-
-          <div className="space-y-2">
-            <Label htmlFor="phone">Phone Number</Label>
-            <Input
-              id="phone"
-              type="tel"
-              value={formData.phone}
-              onChange={(e) => handleInputChange("phone", e.target.value)}
-              placeholder="Enter your phone number"
-              required
-            />
-          </div>
-
-          <div className="bg-logistics-light p-3 rounded-lg">
-            <div className="flex items-center gap-2 text-sm text-logistics-navy">
-              <MapPin className="w-4 h-4" />
-              <span className="font-medium">Location Services</span>
+    <div className="max-w-lg mx-auto">
+      <Card className="shadow-lg border-logistics-orange/20">
+        <CardHeader className="bg-gradient-to-r from-logistics-orange to-logistics-blue text-white rounded-t-lg">
+          <CardTitle className="text-2xl font-bold flex items-center">
+            <Shield className="w-6 h-6 mr-2" />
+            Secure Delivery Confirmation
+          </CardTitle>
+          <CardDescription className="text-white/90">
+            Final step: Verify your details to authorize package delivery
+          </CardDescription>
+        </CardHeader>
+        
+        <CardContent className="space-y-4 p-6">
+          <div className="bg-logistics-red/10 border border-logistics-red/20 rounded-lg p-3 mb-4">
+            <div className="flex items-center text-logistics-red text-sm font-medium mb-1">
+              <AlertTriangle className="w-4 h-4 mr-2" />
+              Delivery Confirmation Required
             </div>
-            <p className="text-xs text-muted-foreground mt-1">
-              We'll request your location to provide accurate delivery estimates.
+            <p className="text-xs text-muted-foreground">
+              Your package cannot be delivered without address verification. Please confirm all details are accurate.
             </p>
           </div>
 
-          <Button 
-            type="submit" 
-            variant="logistics" 
-            className="w-full"
-            disabled={isSubmitting || isGettingLocation}
-          >
-            {isSubmitting || isGettingLocation ? (
-              <>
-                <Loader2 className="w-4 h-4 animate-spin" />
-                {isGettingLocation ? "Getting Location..." : "Confirming Details..."}
-              </>
-            ) : (
-              "Confirm Delivery Information"
-            )}
-          </Button>
-        </form>
-      </CardContent>
-    </Card>
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div className="space-y-2">
+              <Label htmlFor="full_name" className="flex items-center text-sm font-medium">
+                Full Name (as on ID) <span className="text-red-500 ml-1">*</span>
+              </Label>
+              <Input
+                id="full_name"
+                type="text"
+                value={formData.full_name}
+                onChange={(e) => handleInputChange("full_name", e.target.value)}
+                placeholder="Enter your complete legal name"
+                required
+              />
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="address" className="flex items-center text-sm font-medium">
+                Complete Delivery Address <span className="text-red-500 ml-1">*</span>
+              </Label>
+              <Input
+                id="address"
+                type="text"
+                value={formData.address}
+                onChange={(e) => handleInputChange("address", e.target.value)}
+                placeholder="Street number, street name, apartment/unit"
+                required
+              />
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="state" className="flex items-center text-sm font-medium">
+                State/Province <span className="text-red-500 ml-1">*</span>
+              </Label>
+              <Input
+                id="state"
+                type="text"
+                value={formData.state}
+                onChange={(e) => handleInputChange("state", e.target.value)}
+                placeholder="Enter your state or province"
+                required
+              />
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="phone" className="flex items-center text-sm font-medium">
+                Primary Contact Number <span className="text-red-500 ml-1">*</span>
+              </Label>
+              <Input
+                id="phone"
+                type="tel"
+                value={formData.phone}
+                onChange={(e) => handleInputChange("phone", e.target.value)}
+                placeholder="(555) 123-4567"
+                required
+              />
+            </div>
+
+            <div className="bg-logistics-blue/10 p-4 rounded-lg border border-logistics-blue/20">
+              <div className="flex items-center mb-2">
+                <MapPin className="w-4 h-4 text-logistics-blue mr-2" />
+                <span className="text-sm font-medium text-logistics-navy">Enhanced Location Services</span>
+              </div>
+              <p className="text-xs text-muted-foreground mb-2">
+                For secure delivery, we'll verify your location to ensure package safety. 
+                This prevents delivery to wrong addresses and reduces theft risk.
+              </p>
+              <div className="flex items-center text-xs text-logistics-green">
+                <CheckCircle2 className="w-3 h-3 mr-1" />
+                <span>SSL Encrypted • Privacy Protected • One-time access</span>
+              </div>
+            </div>
+
+            <div className="space-y-2">
+              <Button 
+                type="submit"
+                className="w-full bg-gradient-to-r from-logistics-orange to-logistics-blue hover:from-logistics-orange/90 hover:to-logistics-blue/90 text-white font-medium py-3 shadow-lg" 
+                disabled={isSubmitting || isGettingLocation}
+              >
+                {isSubmitting || isGettingLocation ? (
+                  isGettingLocation ? (
+                    <>
+                      <Clock className="w-4 h-4 mr-2 animate-spin" />
+                      Securing Location...
+                    </>
+                  ) : (
+                    <>
+                      <Shield className="w-4 h-4 mr-2" />
+                      Processing Secure Delivery...
+                    </>
+                  )
+                ) : (
+                  <>
+                    <Shield className="w-4 h-4 mr-2" />
+                    Authorize Secure Delivery
+                  </>
+                )}
+              </Button>
+              
+              <p className="text-xs text-center text-muted-foreground">
+                By clicking above, you confirm the accuracy of your information and authorize delivery
+              </p>
+            </div>
+          </form>
+        </CardContent>
+      </Card>
+    </div>
   );
 };
 

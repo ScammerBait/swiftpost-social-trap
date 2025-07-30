@@ -17,9 +17,9 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 220 100% 50%;
+    --primary: 28 100% 52%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 220 100% 60%;
+    --primary-glow: 28 100% 62%;
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -27,7 +27,7 @@ All colors MUST be HSL.
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 39 100% 50%;
+    --accent: 220 91% 51%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -35,16 +35,22 @@ All colors MUST be HSL.
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 220 100% 50%;
+    --ring: 28 100% 52%;
 
-    --logistics-blue: 220 100% 50%;
-    --logistics-orange: 39 100% 50%;
+    --logistics-blue: 220 91% 51%;
+    --logistics-orange: 28 100% 52%;
     --logistics-navy: 225 100% 20%;
     --logistics-light: 220 20% 95%;
+    --logistics-red: 0 84% 60%;
+    --logistics-green: 120 61% 50%;
+    --logistics-warning: 45 93% 47%;
     
-    --gradient-primary: linear-gradient(135deg, hsl(var(--logistics-blue)), hsl(var(--primary-glow)));
+    --gradient-primary: linear-gradient(135deg, hsl(var(--logistics-orange)), hsl(var(--primary-glow)));
     --gradient-hero: linear-gradient(135deg, hsl(var(--logistics-navy)), hsl(var(--logistics-blue)));
+    --gradient-urgent: linear-gradient(135deg, hsl(var(--logistics-red)), hsl(var(--logistics-orange)));
     --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.3);
+    --shadow-urgent: 0 4px 20px -4px hsl(var(--logistics-red) / 0.4);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --radius: 0.5rem;
 
@@ -110,6 +116,24 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+  }
+  
+  .pulse-urgent {
+    animation: pulse-urgent 2s infinite;
+  }
+  
+  @keyframes pulse-urgent {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+  }
+  
+  .countdown-blink {
+    animation: countdown-blink 1s infinite;
+  }
+  
+  @keyframes countdown-blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0.3; }
   }
 }
