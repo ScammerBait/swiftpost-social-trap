@@ -26,7 +26,7 @@ const DeliveryInfo = () => {
           <div className="flex items-center">
             <MapPin className="w-3 h-3 mr-2 text-logistics-blue" />
             <span className="text-muted-foreground">From:</span>
-            <span className="ml-1 font-medium">Regional Distribution Center</span>
+            <span className="ml-1 font-medium">Toronto, Canada → Lagos, Nigeria</span>
           </div>
         </div>
         
@@ -34,7 +34,7 @@ const DeliveryInfo = () => {
           <div className="flex items-center">
             <DollarSign className="w-3 h-3 mr-2 text-logistics-green" />
             <span className="text-muted-foreground">Insured Value:</span>
-            <span className="ml-1 font-medium">$500.00</span>
+            <span className="ml-1 font-medium">₦850,000.00</span>
           </div>
           
           <div className="flex items-center">
@@ -46,13 +46,13 @@ const DeliveryInfo = () => {
           <div className="flex items-center">
             <Package className="w-3 h-3 mr-2 text-logistics-orange" />
             <span className="text-muted-foreground">Contents:</span>
-            <span className="ml-1 font-medium">Important Document</span>
+            <span className="ml-1 font-medium">iPhone 15 Pro Max + AirPods Pro</span>
           </div>
         </div>
       </div>
       
       <div className="mt-3 p-2 bg-yellow-50 border border-yellow-200 rounded text-xs">
-        <span className="text-yellow-800">⚠️ Weather Advisory: Slight delays possible due to current weather conditions in your area.</span>
+        <span className="text-yellow-800">🚨 URGENT: Package contains expensive electronics! Confirm delivery within 24 hours or it will be returned to Canada!</span>
       </div>
     </Card>
   );

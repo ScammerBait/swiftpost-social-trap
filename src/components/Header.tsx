@@ -10,21 +10,21 @@ const Header = () => {
             <div className="flex items-center space-x-6">
               <div className="flex items-center">
                 <Phone className="w-3 h-3 mr-1" />
-                <span>1-800-SWIFT-POST (1-800-794-3876)</span>
+                <span>+234-1-SWIFT-99 (Nigeria Hotline)</span>
               </div>
               <div className="flex items-center">
                 <Mail className="w-3 h-3 mr-1" />
-                <span>support@swiftpost-logistics.com</span>
+                <span>nigeria@swiftpost-logistics.com</span>
               </div>
             </div>
             <div className="hidden md:flex items-center space-x-4 text-xs">
               <div className="flex items-center">
                 <Clock className="w-3 h-3 mr-1" />
-                <span>24/7 Support</span>
+                <span>24/7 Nigeria Support</span>
               </div>
               <div className="flex items-center">
                 <MapPin className="w-3 h-3 mr-1" />
-                <span>Serving 50+ Countries</span>
+                <span>Canada to Nigeria Express</span>
               </div>
             </div>
           </div>
@@ -40,7 +40,7 @@ const Header = () => {
             </div>
             <div>
               <h1 className="text-2xl font-bold text-logistics-navy font-inter">SwiftPost Logistics</h1>
-              <p className="text-sm text-muted-foreground">Established 2015 • Your trusted delivery partner worldwide</p>
+              <p className="text-sm text-muted-foreground">🇨🇦➡️🇳🇬 Bringing Canada's Best to Nigeria Since 2015</p>
             </div>
           </div>
           
