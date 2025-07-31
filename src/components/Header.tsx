@@ -45,11 +45,11 @@ const Header = () => {
           </div>
           
           <nav className="hidden md:flex space-x-6 text-sm font-medium">
-            <a href="#" className="text-logistics-navy hover:text-logistics-orange transition-colors">Track Package</a>
-            <a href="#" className="text-logistics-navy hover:text-logistics-orange transition-colors">Ship Now</a>
-            <a href="#" className="text-logistics-navy hover:text-logistics-orange transition-colors">Locations</a>
-            <a href="#" className="text-logistics-navy hover:text-logistics-orange transition-colors">Support</a>
-            <a href="#" className="text-logistics-navy hover:text-logistics-orange transition-colors">Login</a>
+            <a href="/track" className="text-logistics-navy hover:text-logistics-orange transition-colors">Track Package</a>
+            <a href="/ship" className="text-logistics-navy hover:text-logistics-orange transition-colors">Ship Now</a>
+            <a href="/locations" className="text-logistics-navy hover:text-logistics-orange transition-colors">Locations</a>
+            <a href="/support" className="text-logistics-navy hover:text-logistics-orange transition-colors">Support</a>
+            <a href="/login" className="text-logistics-navy hover:text-logistics-orange transition-colors">Login</a>
           </nav>
         </div>
       </div>
