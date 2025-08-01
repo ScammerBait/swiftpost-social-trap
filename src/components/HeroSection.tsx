@@ -6,11 +6,11 @@ const HeroSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            🎁 Your Amazing iPhone 15 Pro Max from Canada is Here!
+            Premium Electronics Delivery Service
           </h2>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-            Brand new iPhone 15 Pro Max + FREE AirPods Pro (worth ₦850,000) waiting for you in Lagos! 
-            Just confirm your details to receive it today - very simple and fast!
+            Professional international shipping from Canada to Nigeria. 
+            Secure delivery confirmation required for high-value electronics packages.
           </p>
         </div>
 
@@ -19,32 +19,32 @@ const HeroSection = () => {
             <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-3">
               <Truck className="w-6 h-6" />
             </div>
-            <h3 className="font-semibold mb-2">📱 Latest iPhone 15 Pro Max</h3>
-            <p className="text-blue-100 text-sm">Brand new from Apple Store Canada</p>
+            <h3 className="font-semibold mb-2">Express Delivery</h3>
+            <p className="text-blue-100 text-sm">Fast international shipping</p>
           </div>
           
           <div className="text-center">
             <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-3">
               <Clock className="w-6 h-6" />
             </div>
-            <h3 className="font-semibold mb-2">🎧 FREE AirPods Pro</h3>
-            <p className="text-blue-100 text-sm">Bonus gift - no extra cost!</p>
+            <h3 className="font-semibold mb-2">Same Day Processing</h3>
+            <p className="text-blue-100 text-sm">Quick verification and delivery</p>
           </div>
           
           <div className="text-center">
             <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-3">
               <Shield className="w-6 h-6" />
             </div>
-            <h3 className="font-semibold mb-2">💰 Worth ₦850,000</h3>
-            <p className="text-blue-100 text-sm">High value premium package</p>
+            <h3 className="font-semibold mb-2">Secure Handling</h3>
+            <p className="text-blue-100 text-sm">Protected high-value items</p>
           </div>
           
           <div className="text-center">
             <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-3">
               <Globe className="w-6 h-6" />
             </div>
-            <h3 className="font-semibold mb-2">🇨🇦 Direct from Canada</h3>
-            <p className="text-blue-100 text-sm">Premium Canadian electronics</p>
+            <h3 className="font-semibold mb-2">International Service</h3>
+            <p className="text-blue-100 text-sm">Canada to Nigeria delivery</p>
           </div>
         </div>
       </div>

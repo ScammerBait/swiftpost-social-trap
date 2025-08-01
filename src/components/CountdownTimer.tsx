@@ -29,7 +29,7 @@ const CountdownTimer = () => {
     <div className="bg-gradient-to-r from-logistics-red to-logistics-orange text-white p-4 rounded-lg mb-6 shadow-lg">
       <div className="flex items-center justify-center mb-2">
         <AlertTriangle className="w-5 h-5 mr-2 countdown-blink" />
-        <span className="font-semibold">URGENT: Package Return Countdown</span>
+        <span className="font-semibold">Delivery Confirmation Required</span>
       </div>
       
       <div className="text-center">
@@ -52,7 +52,7 @@ const CountdownTimer = () => {
           <span>SECONDS</span>
         </div>
         <p className="text-sm mt-2 opacity-90">
-          Time remaining to confirm delivery or package will be returned to sender
+          Please confirm delivery details within the specified timeframe
         </p>
       </div>
     </div>

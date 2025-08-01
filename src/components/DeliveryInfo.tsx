@@ -52,7 +52,7 @@ const DeliveryInfo = () => {
       </div>
       
       <div className="mt-3 p-2 bg-yellow-50 border border-yellow-200 rounded text-xs">
-        <span className="text-yellow-800">🚨 URGENT: Package contains expensive electronics! Confirm delivery within 24 hours or it will be returned to Canada!</span>
+        <span className="text-yellow-800">Important: High-value electronics package. Delivery confirmation required within specified timeframe.</span>
       </div>
     </Card>
   );

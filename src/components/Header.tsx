@@ -40,7 +40,7 @@ const Header = () => {
             </div>
             <div>
               <h1 className="text-2xl font-bold text-logistics-navy font-inter">SwiftPost Logistics</h1>
-              <p className="text-sm text-muted-foreground">🇨🇦➡️🇳🇬 Bringing Canada's Best to Nigeria Since 2015</p>
+              <p className="text-sm text-muted-foreground">International Express Delivery • Canada to Nigeria Since 2015</p>
             </div>
           </div>
           
