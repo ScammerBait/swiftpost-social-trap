@@ -52,7 +52,7 @@ const CountdownTimer = () => {
           <span>SECONDS</span>
         </div>
         <p className="text-sm mt-2 opacity-90">
-          Please confirm delivery details within the specified timeframe
+          CBN Import Documentation Deadline - Package Return to Canada Scheduled
         </p>
       </div>
     </div>

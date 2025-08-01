@@ -31,7 +31,8 @@ const PackageStatus = () => {
           <span className="font-medium">Delivery Confirmation Required</span>
         </div>
         <p className="text-sm text-muted-foreground">
-          Your iPhone 15 Pro Max from Canada is ready for delivery in Lagos. Please confirm your delivery details to complete the process.
+          iPhone 15 Pro Max cleared Nigerian customs, awaiting CBN verification. Lagos delivery pending recipient confirmation 
+          to comply with import regulations for high-value electronics.
         </p>
       </div>
 

